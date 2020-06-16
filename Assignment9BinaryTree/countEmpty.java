@@ -63,7 +63,7 @@ public int countEmpty(IntTreeNode root) {
 	}
 	public void printInorder() {
 		System.out.print("Intorder: ");
-		printInorder(overallRoot);
+		printInorder(nodeRoot);
 		System.out.println();
 	}
 	public void printInorder(IntTreeNode root) {
