@@ -37,7 +37,7 @@ public int countEmpty(IntTreeNode root) {
 	}
 	public IntTree(int max) {
 		if(max <=0) {
-			throw new IllegalArgumentException("max: " + max);
+			throw new IllegalArgumentException();
 		}
 		nodeRoot=buildTree(1,max);
 	}
