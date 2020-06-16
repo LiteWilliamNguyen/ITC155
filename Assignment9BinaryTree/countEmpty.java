@@ -13,10 +13,10 @@ import java.util.*;
 
 
 public class IntTree{
-	public IntTreeNode overallRoot;
+	public IntTreeNode nodeRoot;
 	
 	public int countEmpty() {
-		return countEmpty(overallRoot);
+		return countEmpty(nodeRoot);
 	}
 public int countEmpty(IntTreeNode root) {
 		if(root==null) {
@@ -33,13 +33,13 @@ public int countEmpty(IntTreeNode root) {
 		}
 	}
 	public IntTree() {
-		overallRoot=null;
+		nodeRoot=null;
 	}
 	public IntTree(int max) {
 		if(max <=0) {
 			throw new IllegalArgumentException("max: " + max);
 		}
-		overallRoot=buildTree(1,max);
+		nodeRoot=buildTree(1,max);
 	}
 	public IntTreeNode buildTree(int n, int max) {
 		if(n>max) {
@@ -51,7 +51,7 @@ public int countEmpty(IntTreeNode root) {
 	}
 	public void printPreorder() {
 		System.out.print("Preorder: ");
-		printPreorder(overallRoot);
+		printPreorder(nodeRoot);
 		System.out.println();
 	}
 	public void printPreorder(IntTreeNode root) {
@@ -75,7 +75,7 @@ public int countEmpty(IntTreeNode root) {
 	}
 	public void printPostorder() {
 		System.out.print("Postorder: ");
-		printPostorder(overallRoot);
+		printPostorder(nodeRoot);
 		System.out.println();
 	}
 	public void printPostorder(IntTreeNode root) {
@@ -86,7 +86,7 @@ public int countEmpty(IntTreeNode root) {
 		}
 	}
 	public void printSideways() {
-        printSideways(overallRoot, 0);
+        printSideways(nodeRoot, 0);
     }
 	private void printSideways(IntTreeNode root, int level) {
         if (root != null) {
